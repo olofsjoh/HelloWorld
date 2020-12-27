@@ -1,11 +1,29 @@
 package com.example.helloworld;
-import org.jool.ecommerce.*;
+import com.jool.vehicle.*;
+
+import java.util.ArrayList;
 
 //import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) {
-        StoreFront storeFront = new StoreFront();
+
+
+
+
+        VehicleFileReader reader = new VehicleFileReader();
+        ArrayList<Vehicle> list = reader.getVehicles();
+
+        for(Vehicle vehicle:  list){
+            System.out.println(vehicle.toString());
+        }
+
+
+
+
+
+
+        /*StoreFront storeFront = new StoreFront();
         storeFront.addItem("CO1", "MUG", "9.99", "150");
         storeFront.addItem("CO2", "LG MUG", "12.99", "82");
         storeFront.addItem("CO3", "MOUSE PAD", "10.49", "800");
@@ -17,9 +35,9 @@ public class Main {
                                "\nName: " + item.getName() +
                                "\nRetail Price: $" + item.getRetail() +
                                "\nPrice: $" + item.getPrice() +
-                               "\nQuantity: " + item.getQuantity());
+                               "\nQuantity: " + item.getQuantity());*/
 
-        }
+
     }
 }
 
